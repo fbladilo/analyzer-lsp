@@ -13,7 +13,7 @@ RUN cd external-providers/java-external-provider && go mod edit -replace=github.
 
 # FIXME: Runtime mta-jdtls-server-base (To be removed in release-0.5 pending)
 FROM brew.registry.redhat.io/rh-osbs/mta-mta-jdtls-server-base-rhel9:8.0.0
-RUN microdnf -y install python3-devel gcc-c++
+RUN dnf -y install python3-devel gcc-c++
 
 RUN mkdir /analyzer-lsp
 

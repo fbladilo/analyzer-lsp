@@ -11,9 +11,9 @@ WORKDIR /workspace/hack/build/csharp-language-server
 # Ignore csharp ls build tests errors (if binary fails to build, COPY will fail as well)
 RUN dotnet publish -o bin -p:PublishSingleFile=true ; true
 
-FROM registry.redhat.io/ubi9-minimal:latest
+FROM registry.redhat.io/ubi9:latest
 USER root
-RUN microdnf -y install openssl dotnet-sdk-8.0 dotnet-sdk-7.0 && microdnf -y clean all
+RUN dnf -y install openssl dotnet-sdk-8.0 dotnet-sdk-7.0 && dnf -y clean all
 ENV PATH="$PATH:/opt/app-root/.dotnet/tools:/home/go/bin"
 RUN mkdir -p /opt/input/source && chown -R 1001:0 /opt/input
 ENV XDG_DATA_HOME=/tmp/.xdg \
