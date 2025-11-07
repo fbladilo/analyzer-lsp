@@ -14,3 +14,11 @@ ENV HOME /addon
 EXPOSE 14651
 WORKDIR /addon
 ENTRYPOINT ["java-external-provider", "--port", "14651"]
+
+LABEL \
+        description="Migration Toolkit for Applications - Java External Provider" \
+        io.k8s.description="Migration Toolkit for Applications - Java External Provider" \
+        io.k8s.display-name="MTA - Java External Provider" \
+        io.openshift.maintainer.project="MTA" \
+        io.openshift.tags="migration,modernization,mta,tackle,konveyor" \
+        summary="Migration Toolkit for Applications - Java External Provider"

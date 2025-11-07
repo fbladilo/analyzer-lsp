@@ -29,3 +29,11 @@ WORKDIR /analyzer-lsp
 RUN chgrp -R 0 /analyzer-lsp && chmod -R g=u /analyzer-lsp
 
 ENTRYPOINT ["sh", "-c", "konveyor-analyzer"]
+
+LABEL \
+        description="Migration Toolkit for Applications - Analyzer LSP" \
+        io.k8s.description="Migration Toolkit for Applications - Analyzer LSP" \
+        io.k8s.display-name="MTA - Analyzer LSP" \
+        io.openshift.maintainer.project="MTA" \
+        io.openshift.tags="migration,modernization,mta,tackle,konveyor" \
+        summary="Migration Toolkit for Applications - Analyzer LSP"

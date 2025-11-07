@@ -34,3 +34,11 @@ COPY --from=go-builder /workspace/LICENSE /licenses/
 COPY --from=go-dep-provider /usr/local/bin/golang-dependency-provider /usr/local/bin/golang-dependency-provider
 
 ENTRYPOINT ["/usr/local/bin/generic-external-provider"]
+
+LABEL \
+        description="Migration Toolkit for Applications - Generic External Provider" \
+        io.k8s.description="Migration Toolkit for Applications - Generic External Provider" \
+        io.k8s.display-name="MTA - Generic External Provider" \
+        io.openshift.maintainer.project="MTA" \
+        io.openshift.tags="migration,modernization,mta,tackle,konveyor" \
+        summary="Migration Toolkit for Applications - Generic External Provider"

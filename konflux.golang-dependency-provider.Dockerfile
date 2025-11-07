@@ -12,3 +12,11 @@ COPY --from=builder /workspace/external-providers/golang-dependency-provider/gol
 COPY --from=builder /workspace/LICENSE /licenses/
 
 ENTRYPOINT ["/usr/local/bin/golang-dependency-provider"]
+
+LABEL \
+        description="Migration Toolkit for Applications - Golang Dependency Provider" \
+        io.k8s.description="Migration Toolkit for Applications - Golang Dependency Provider" \
+        io.k8s.display-name="MTA - Golang Dependency Provider" \
+        io.openshift.maintainer.project="MTA" \
+        io.openshift.tags="migration,modernization,mta,tackle,konveyor" \
+        summary="Migration Toolkit for Applications - Golang Dependency Provider"

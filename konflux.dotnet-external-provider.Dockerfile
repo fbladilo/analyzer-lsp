@@ -30,3 +30,11 @@ COPY --from=dotnet-builder --chown=1001:0 /workspace/hack/build/csharp-language-
 RUN csharp-ls -v
 
 ENTRYPOINT ["dotnet-external-provider", "-port", "3456"]
+
+LABEL \
+        description="Migration Toolkit for Applications - Dotnet External Provider" \
+        io.k8s.description="Migration Toolkit for Applications - Dotnet External Provider" \
+        io.k8s.display-name="MTA - Dotnet External Provider" \
+        io.openshift.maintainer.project="MTA" \
+        io.openshift.tags="migration,modernization,mta,tackle,konveyor" \
+        summary="Migration Toolkit for Applications - Dotnet External Provider"
